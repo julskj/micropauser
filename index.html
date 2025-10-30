@@ -1,7 +1,132 @@
 <!DOCTYPE html>
-<html lang ="da">
+<html lang="da">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Micropauser</title>
+    <title>FRI:RUM – dit digitale frirum</title>
+
+    <!-- Typografi: Inter (til læsbarhed / WCAG) -->
+    <link rel="preconnect" href="https://rsms.me/">
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+
+    <!-- Ikoner -->
+    <script src="https://kit.fontawesome.com/a1abdf67d8.js" crossorigin="anonymous"></script>
+
+    <!-- Vores stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Burger-menu script -->
+    <script src="js/navigation.js" defer></script>
+</head>
+
+<body>
+
+<header>
+    <nav id="main-nav">
+        <ul>
+            <li><a href="#brevkasse">Brevkassen</a></li>
+            <li><a href="#frirum" class="nav-highlight">Start dit frirum</a></li>
+            <li><a href="#kontakt">Kontakt os</a></li>
+        </ul>
+    </nav>
+
+    <button id="bars" aria-label="Åbn menu">
+        <i class="fa-solid fa-bars"></i>
+    </button>
+</header>
+
+<main>
+
+    <!-- HERO / INTRO -->
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Velkommen til dit digitale frirum</h1>
+            <p>
+                2 minutters pause til dig, når hovedet larmer.<br>
+                FRI:RUM er skabt til unge der føler sig overstimulerede, pressede
+                eller bare har brug for at trække vejret uden at skulle præstere.
+            </p>
+            <a class="primary-btn" href="#frirum">Start dit frirum</a>
+        </div>
+
+        <div class="hero-img">
+            <!-- midlertidigt billede -->
+            <img src="img/Design uden navn (1).svg" alt="Roligt naturmotiv med plads til at trække vejret">
+        </div>
+    </section>
+
+    <!-- MICROFEATURES -->
+    <section class="features" id="frirum">
+        <!-- 1 -->
+        <div class="cta-card cta-1">
+            <h2>1 minuts frirum</h2>
+            <p>
+                En guidet ro-øvelse du kan lytte til eller læse.
+                Lavet til stressede hjerner og korte pauser.
+            </p>
+            <a href="#" class="more-link">Prøv nu</a>
+        </div>
+
+        <!-- 2 -->
+        <div class="cta-card cta-2">
+            <h2>Træk et kort</h2>
+            <p>
+                Få et lille selvomsorgs-kort: en tanke, en grænse,
+                en blid reminder om at du stadig er vigtig.
+            </p>
+            <a href="#" class="more-link">Træk et kort</a>
+        </div>
+
+        <!-- 3 -->
+        <div class="cta-card cta-3">
+            <h2>Selvhjælp & viden</h2>
+            <p>
+                Små, overskuelige råd om overstimulering, grænser
+                og mental ro – skrevet i et sprog du faktisk kan holde ud.
+            </p>
+            <a href="#" class="more-link">Læs mere</a>
+        </div>
+    </section>
+
+    <!-- BREVKASSE / TRYGHED -->
+    <section class="brevkasse" id="brevkasse">
+        <div class="brevkasse-inner">
+            <h2>Skriv anonymt til brevkassen</h2>
+            <p>
+                Har du brug for at sige det højt til et voksent menneske,
+                men uden at skulle forklare dig 40 gange?
+                Du kan skrive anonymt. Vi svarer omsorgsfuldt og respektfuldt.
+            </p>
+            <a href="#" class="secondary-btn">Skriv til os</a>
+        </div>
+        <div class="brevkasse-img">
+            <img src="img/brevkasse-placeholder.jpg" alt="Person der taler trygt med en rådgiver">
+        </div>
+    </section>
+
+</main>
+
+<footer id="kontakt">
+    <div class="footer-inner">
+        <div>
+            <strong>FRI:RUM</strong><br>
+            Et øjeblik af frihed.
+        </div>
+
+        <div>
+            <p><strong>Kontakt</strong><br>
+            kontakt@frirum.dk<br>
+            @frirum (Instagram / TikTok)</p>
+        </div>
+
+        <div>
+            <p><strong>Tilgængelighed</strong><br>
+            WCAG 2.2 AA farvekontrast<br>
+            Video med undertekster<br>
+            Lyd + tekst-alternativ</p>
+        </div>
+    </div>
+</footer>
+
+</body>
 </html>

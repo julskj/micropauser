@@ -42,9 +42,17 @@ header {
   position: relative;
 }
 
+nav{
+display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 nav ul {
   list-style: none;
     padding: 0;
+    display: flex;
+    gap: 1.5rem;
 }
 
 nav li {
@@ -57,15 +65,34 @@ nav li a {
   text-decoration: none;
     font-size: 1rem;
   font-weight: 500;
+  transition: all 0.2s ease;
 }
 
-nav li a:hover,
-nav li a.nav-highlight {
+nav li a:hover {
     text-decoration: underline;
     text-underline-offset: 0.2em;
     color: #2E3A34;
   font-weight: 600;
 }
+
+nav li a.nav-highlight {
+    background-color: #D4A373;
+    color: #fff;
+    padding: 0.6em 1em;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+nav li a.nav-highlight:hover
+nav li a.nav-highlight:focus-visible {
+    background-color: #c79258;
+    color: #fff;
+    outline: 3px solid #2E3A34;
+    outline-offset: 3px;
+}
+    
+
 
 /* burger */
 button#bars {
@@ -77,6 +104,52 @@ button#bars {
   position: absolute;
   right: 1rem;
     top: 1rem;
+    cursor: pointer;
+}
+
+/* Vis visuel fokusmarkering til tastaturbrugere */
+button#bars:focus-visible {
+    outline: 3px solid #2E3A34;
+    outline-offset: 3px;
+    border-radius: 6px;
+}
+
+/* Skjul UL som default på mobil */
+@media (max-width: 768px) 
+{
+  nav ul {
+    display: none;
+    flex-direction: column;
+    background-color: #E2D3B6;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    border-top: 1px solid rgba(0,0,0,0.1);
+}
+}
+
+/* Når JS tilføjer .show til nav, vises menuen */
+nav.show ul {
+    display: flex;
+}
+
+nav li {
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    padding: 1em 0;
+}
+
+/* burger vises på mobil */
+#bars {
+    display: block;
+}
+
+/* På større skærme skjules burger */
+@media (min-width: 769px) {
+    #bars {
+        display: none;
+    }
 }
 
 /* MAIN LAYOUT WRAPPING */

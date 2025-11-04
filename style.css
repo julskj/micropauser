@@ -5,19 +5,26 @@
   padding: 0;
 }
 
-img {
-    max-width: 100%;
-    display: block;
-}
-
+html { 
+  scroll-behavior: smooth;
+ }
 body {
-    font-family: "Inter", Arial, Helvetica, sans-serif;
-    background-color: #BFD0C0;      /* den lyse grønne/duse baggrund */
-    color: #2E3A34;                 /* mørk tekst for god kontrast */
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  background-color: #BFD0C0;
+  color: #2E3A34;
   line-height: 1.6;
 }
+img {
+   max-width: 100%; display: block; 
+   height: auto;}
 
-/* FARVER (til reference / dokumentation)
+/* Fokusmarkering (WCAG 2.2) */
+:focus-visible {
+  outline: 3px solid #2E3A34;
+  outline-offset: 3px;
+}
+
+/* FARVER *
     --baggrund lys grøn:   #BFD0C0
     --baggrund beige:      #E2D3B6
     --accent varm brun:    #D4A373

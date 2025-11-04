@@ -24,9 +24,9 @@
 <header>
     <nav id="main-nav">
         <ul>
-            <li><a href="#brevkasse">Brevkassen</a></li>
-            <li><a href="#frirum" class="nav-highlight">Start dit frirum</a></li>
-            <li><a href="#kontakt">Kontakt os</a></li>
+            <li><a href="2min.html">2minro</a></li>
+            <li><a href="#selvhjælpogviden" class="nav-highlight">Råd, viden og vejledning</a></li>
+         <li><a href="#brevkassen">Kontakt os</a></li>
         </ul>
     </nav>
 
@@ -38,9 +38,9 @@
 <main>
 
     <!-- HERO / INTRO -->
-    <section class="hero">
+    <section class="hero" aria-labelledby="hero-title">
         <div class="hero-text">
-            <h1>Velkommen til dit digitale frirum</h1>
+            <h1 id="hero-title"> Velkommen til dit digitale frirum</h1>
             <p>
                 2 minutters pause til dig, når hovedet larmer.<br>
                 FRI:RUM er skabt til unge der føler sig overstimulerede, pressede
@@ -50,76 +50,78 @@
         </div>
 
         <div class="hero-img">
-            <!-- midlertidigt billede -->
+            <!-- billede -->
             <img src="img/Design uden navn (1).svg" alt="Roligt naturmotiv med plads til at trække vejret">
         </div>
     </section>
 
-    <!-- MICROFEATURES -->
-    <section class="features" id="frirum">
-        <!-- 1 -->
-        <div class="cta-card cta-1">
-            <h2>1 minuts frirum</h2>
-            <p>
-                En guidet ro-øvelse du kan lytte til eller læse.
-                Lavet til stressede hjerner og korte pauser.
-            </p>
-            <a href="#" class="more-link">Prøv nu</a>
-        </div>
+    <!-- H/P -->
+<section class="features" id="frirum" aria-labelledby="features-title" role="list">
+  <!-- Skærmlæser-overskrift (synes ikke visuelt, men giver sektionen et navn) -->
+  <h2 id="features-title" class="sr-only">Dit digitale FRI:RUM</h2>
 
-        <!-- 2 -->
-        <div class="cta-card cta-2">
-            <h2>Træk et kort</h2>
-            <p>
-                Få et lille selvomsorgs-kort: en tanke, en grænse,
-                en blid reminder om at du stadig er vigtig.
-            </p>
-            <a href="#" class="more-link">Træk et kort</a>
-        </div>
+  <!-- 1 -->
+  <div class="cta-card cta-1" role="listitem">
+    <h3>2 minutters frirum</h3>
+    <p>
+      En 2-minutters guidet ro-øvelse du kan lytte til eller læse.
+      Lavet til stressede hjerner og mikropauser.
+    </p>
+    <a href="#" class="more-link" aria-label="Start 1 minuts frirum">Prøv nu</a>
+  </div>
 
-        <!-- 3 -->
-        <div class="cta-card cta-3">
-            <h2>Selvhjælp & viden</h2>
-            <p>
-                Små, overskuelige råd om overstimulering, grænser
-                og mental ro – skrevet i et sprog du faktisk kan holde ud.
-            </p>
-            <a href="#" class="more-link">Læs mere</a>
-        </div>
-    </section>
 
-    <!-- BREVKASSE / TRYGHED -->
-    <section class="brevkasse" id="brevkasse">
-        <div class="brevkasse-inner">
-            <h2>Skriv anonymt til brevkassen</h2>
+  <!-- 2 -->
+  <div class="cta-card cta-3" role="listitem">
+    <h3>Selvhjælp & viden</h3>
+    <p>
+      Små, overskuelige råd om overstimulering, grænser
+      og mental ro – skrevet i et sprog du faktisk kan holde ud.
+    </p>
+    <a href="#" class="more-link" aria-label="Læs selvhjælp og viden">Læs mere</a>
+  </div>
+</section>
+
+
+    <!-- BREVKASSE -->
+    <section class="brevkasse" id="brevkasse" aria-labelledby="brevkasse-title">
+        <div class="brevkasse-text">
+            <h2 id="brevkasse-title">Skriv anonymt til brevkassen</h2>
             <p>
-                Har du brug for at sige det højt til et voksent menneske,
-                men uden at skulle forklare dig 40 gange?
-                Du kan skrive anonymt. Vi svarer omsorgsfuldt og respektfuldt.
+               “Jeg kan ikke sige det til mine forældre/veninder/kæreste – men jeg
+               har brug for at nogen voksne tager mig seriøst.” Du kan være helt anonym.
             </p>
-            <a href="#" class="secondary-btn">Skriv til os</a>
+            <a class="secondary-btn" href="#">Skriv til os</a>
         </div>
         <div class="brevkasse-img">
-            <img src="img/brevkasse-placeholder.jpg" alt="Person der taler trygt med en rådgiver">
+            <!--MANGLER BILLEDE-->
+            <img src="img/brevkasse-placeholder.jpg" alt="En ung person sidder overfor en voksen rådgiver og taler; rådgiveren lytter opmærksomt med åbent kropssprog. Billedet viser et roligt rådgivningsrum med varm belysning og planter i baggrunden. Ingen synlig tekst i billedet. Tonen er tryg, rolig og støttende.">
         </div>
     </section>
 
 </main>
 
-<footer id="kontakt">
+<!-- FOOTER -->
+
+<footer id="kontakt" class="site-footer" aria-label="sidefod">
     <div class="footer-inner">
-        <div>
+    <div class="footer-col">
+
             <strong>FRI:RUM</strong><br>
             Et øjeblik af frihed.
         </div>
+        <div class="footer-col">
+            <p><strong>Om os</strong><br>
+            FRI:RUM er et digitalt frirum skabt af Frirum
+            – en non-profit organisation der arbejder for unges mentale trivsel.</p>
 
-        <div>
+        <div class="footer-col">
             <p><strong>Kontakt</strong><br>
             kontakt@frirum.dk<br>
             @frirum (Instagram / TikTok)</p>
         </div>
 
-        <div>
+        <div class="footer-col">
             <p><strong>Tilgængelighed</strong><br>
             WCAG 2.2 AA farvekontrast<br>
             Video med undertekster<br>

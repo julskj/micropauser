@@ -1,4 +1,4 @@
-/* RESET / BASE */
+/* BASE */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -15,7 +15,8 @@ body {
   line-height: 1.6;
 }
 img {
-   max-width: 100%; display: block; 
+   max-width: 100%;
+   display: block; 
    height: auto;}
 
 /* Fokusmarkering (WCAG 2.2) */
@@ -24,7 +25,7 @@ img {
   outline-offset: 3px;
 }
 
-/* FARVER *
+/* FARVER: 
     --baggrund lys grøn:   #BFD0C0
     --baggrund beige:      #E2D3B6
     --accent varm brun:    #D4A373
@@ -46,6 +47,23 @@ header {
 .logo img {
   height: 45px;
   width: auto;
+}
+/* Brand / logo til venstre */
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+}
+
+.brand img {
+  height: 36px;            
+  width: auto;
+}
+
+.brand span {
+  font-weight: 700;
+  letter-spacing: .5px;
+  color: #2E3A34;
 }
 
 /* NAVIGATION LINKS */
@@ -75,56 +93,7 @@ nav li a.nav-highlight {
   border-radius: 10px;
 }
 
-/* skjul burger på desktop */
-#bars {
-  display: none;
-}
-
-/* RESPONSIV NAVIGATION */
-@media (max-width: 768px) {
-  header {
-    justify-content: flex-end;
-  }
-
-  .logo img {
-    position: absolute;
-    left: 1rem;
-    top: 0.7rem;
-    height: 40px;
-  }
-
-  nav {
-    display: none;
-  }
-
-  nav.show {
-    display: block;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    background-color: #E2D3B6;
-    width: 100%;
-    padding: 1em 0;
-    z-index: 100;
-  }
-
-  nav ul {
-    flex-direction: column;
-    align-items: center;
-    gap: 1em;
-  }
-
-  #bars {
-    display: block;
-    background: none;
-    border: none;
-    font-size: 1.6rem;
-    color: #2E3A34;
-  }
-}
-
-
-/* burger */
+/* burger knap */
 button#bars {
     background-color: #E2D3B6;
   border: none;
@@ -135,6 +104,12 @@ button#bars {
   right: 1rem;
     top: 1rem;
     cursor: pointer;
+
+    }
+
+/* skjul burger på desktop */
+#bars {
+  display: none;
 }
 
 /* Vis visuel fokusmarkering til tastaturbrugere */
@@ -144,70 +119,88 @@ button#bars:focus-visible {
     border-radius: 6px;
 }
 
-/* Skjul UL som default på mobil */
-@media (max-width: 768px) /* altid 1 px i forskeel 798-768 */
-{
-  nav ul {
-    display: none;
-    flex-direction: column;
-    background-color: #E2D3B6;
+/*  MOBIL / TABLET  */
+@media screen and (max-width: 768px){
+
+    /* skjul menu - vis burger */
+    header nav {
+        display: none;
+    }
+
+    header {
+        justify-content: flex-end;
+        position: relative; 
+    }
+
+    /* logo flyttes til venstre */
+    .brand {
+        position: absolute;
+        left: 1rem;
+        top: 0.5rem;
+    }
+
+    .brand img {
+        height: 32px;
+    }
+  }
+
+/* når JS giver nav .show, gør den synlig som fuld bredde */
+  nav.show {
+    display: block;
     position: absolute;
     top: 60px;
     left: 0;
+    background-color: #E2D3B6;
     width: 100%;
+    border-top: 1px solid rgba(0,0,0,0.08);
+    z-index: 100;
+  }
+
+  nav.show ul {
+    display: block;
+    width: 100%;
+    background-color: #E2D3B6;
+    padding: 1rem 0;
+  }
+   nav.show li {
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+    padding: 0.8rem 0;
     text-align: center;
-    border-top: 1px solid rgba(0,0,0,0.1);
-}
-}
-/* Brand / logo til venstre */
-.brand {
-  display: inline-flex;
-  align-items: center;
-  gap: .5rem;
-}
+  }
 
-.brand img {
-  height: 36px;            
-  width: auto;
-}
+  nav.show a {
+    display: block;
+    color: #2E3A34;
+    font-weight: 500;
+  }
 
-.brand span {
-  font-weight: 700;
-  letter-spacing: .5px;
-  color: #2E3A34;
-}
-
-
-/* Når JS tilføjer .show til nav, vises menuen */
-nav.show ul {
-    display: flex;
-}
-
-nav li {
-    border-bottom: 1px solid rgba(0,0,0,0.1);
-    padding: 1em 0;
-}
 
 /* burger vises på mobil */
 #bars {
     display: block;
 }
 
-/* På større skærme skjules burger */
+
+/* DESKTOP / STOR SKÆRM */
 @media (min-width: 769px) {
-    #bars {
-        display: none;
-    }
+
+nav ul {
+    justify-content: center;
+    align-items: center;
+}
+
+nav li {
+    border: none;
+    padding: 0.8rem 0;
+}
+
+/* burger skjules på desktop */
+#bars {
+    display: none;
+}
 }
 
 /* MAIN LAYOUT WRAPPING */
-main {
-    margin: 2em 1em 4em;
-    display: grid;
-    gap: 3em;
-   
-}
-
 main {
   margin: 2em 1em 4em;
   display: grid;
@@ -229,7 +222,7 @@ section p {
 }
 
 /*visuelt hierarki */
-h1,h2,h3,h4,h5,h6 {
+h1, h2, h3, h4, h5, h6 {
     color: #2E3A34;
     font-weight: 600;
 line-height: 1.2;
@@ -288,7 +281,26 @@ line-height: 1.2;
     border: 1px solid rgba(0,0,0,0.06);
 }
 
-/* FEATURES (3 kort) */
+ /* HERO to-kolonne layout desktop*/
+@media (min-width: 769px) {
+    .hero {
+        grid-template-columns: 1fr 1fr;
+      
+    }
+
+    .hero-text {
+        max-width: 480px;
+    }
+
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+    .hero-text p {
+        font-size: 1.05rem;
+    }
+}
+
+    /* FEATURES (3 kort) */
 .features {
   display: grid;
     gap: 1.5em;
@@ -345,12 +357,13 @@ line-height: 1.2;
     text-decoration: none;
 }
 
-@media (min-width: 769px) {
+    /* 3 kolonner desktop */
+     @media (min-width: 769px) {
     .features {
         grid-template-columns: repeat(3, 1fr);
     }
-
-}
+    }
+    
 /* BREVKASSE SEKTIOEN */
 .brevkasse {
   background-color: #E2D3B6; /* varm beige "kontakt os" blok */
@@ -381,7 +394,8 @@ line-height: 1.2;
   margin-top: 1em;
 }
 
-@media (min-width: 769px) {
+  /* brevkasse 2 kolonne på desktop*/
+  @media (min-width: 769px) {
     .brevkasse {
         grid-template-columns: 1fr 1fr; /*tekst + billede side om side */
     }
@@ -399,16 +413,16 @@ line-height: 1.2;
 
 .secondary-btn:hover {
   background-color: #1d2622; /* mørkere ved hover */
-  transform: translateY(-2px); /* let bevægelse */
+   transform: translateY(-2px); /* let bevægelse */
 }
 
 .secondary-btn:focus-visible {
-    outline: 3px solid #D4A373; /*tydelig fokusmarkering WCAG2.2*/
-    outline-offset: 3px;
-    border-radius: 8px;
+     outline: 3px solid #D4A373; /*tydelig fokusmarkering WCAG2.2*/
+     outline-offset: 3px;
+     border-radius: 8px;
 }
 
-/* brevkasse billede */
+/* brevkasse billede MANGLER */
 .brevkasse-img img { 
     border-radius: 12px;
     box-shadow: 0 12px 32px rgba(0,0,0,0.08);
@@ -455,124 +469,10 @@ footer a:hover, footer a:focus-visible {
     outline: 2px solid #D4A373; /* tydelig tastaturfokus */
     }
 
-/* DESKTOP / STOR SKÆRM */
+/* FOOTER 3 kolonner på desktop */
 @media screen and (min-width: 769px) {
   .footer-inner {
-      grid-template-columns: repeat(3, 1fr);
-      gap: 3em;
-   }
-  }
-
-    /* burger skjules på desktop */
-    @media (min-width: 769px) {
-    #bars {
-    display: none;
-   }
-  }
-
-    header {
-        justify-content: center;
-    }
-
-    nav ul {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 2rem;
-    }
-
-    /* HERO to-kolonne layout */
-    .hero {
-        grid-template-columns: 1fr 1fr;
-        align-items: center;
-    }
-
-    .hero-text {
-        max-width: 480px;
-    }
-
-    .hero-text h1 {
-        font-size: 2rem;
-    }
-    .hero-text p {
-        font-size: 1.05rem;
-    }
-
-   @media (min-width: 769px) {
-
-    /* FEATURES  3 kolonner */
-    .features {
-        grid-template-columns: repeat(3, 1fr);
-    }
-
-    /* BREVKASSE  2 kolonner (tekst + billede) */
-    .brevkasse {
-        grid-template-columns: 1fr 1fr;
-        align-items: center;
-    }
-
-    /* FOOTER  3 kolonner */
-    .footer-inner {
-        max-width: 1100px;
-        margin: 0 auto;
-        grid-template-columns: repeat(3, 1fr);
-    }
-
-    main {
-        max-width: 1100px;
-        margin: 3em auto 6em;
-        width: 100%;
-        gap: 4em;
-     }
-    }
-
-
-/*  MOBIL / TABLET  */
-@media screen and (max-width: 768px){
-
-    /* skjul menu - vis burger */
-    header nav {
-        display: none;
-    }
-
-    header {
-        justify-content: flex-end;
-        position: relative; 
-    }
-
-    /* når JS giver nav .show, gør den synlig som fuld bredde */
-    nav.show {
-     display: block;
-     position: absolute;
-     top: 60px;
-     left: 0;
-     background-color: #E2D3B6;
-     width: 100%;
-      border-top: 1px solid rgba(0,0,0,0.08);
-
-  }
-
-  nav.show ul {
-    display: block;
-    width: 100%;
-    background-color: #e2d3b6;
-    padding: 1rem 0;
-  }
-
-  nav.show li {
-    border-bottom: 1px solid rgba(0,0,0,0.08);
-    padding: 0.8rem 0;
-    text-align: center;
-  }
-
-  nav.show a {
-    display: block;
-    color: #2E3A34;
-    font-weight: 500;
- }
-
- /*burger knap mobil*/
- #bars {
-    display: block;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3em;
   }
 }

@@ -22,16 +22,16 @@
 <body>
 
 <header>  <!--logo til venstre-->
-  <a href="index.html" class="logo">
+  <a href="index.html" class="logo brand">
     <img src="img/FRIRUM (1).svg" alt="FRI:RUM logo" /> <!--logo som solsikke-->
   </a>
     <!-- burger-menu mobil -->
   <button id="bars" aria-label="Åbn menu">☰</button>
 
-  <nav> <!-- navigation links -->
+  <nav id="main-nav"> <!-- navigation links -->
     <ul>
       <li><a href="#frirum">2minro</a></li>
-      <li><a href="#selvhjælp" class="nav-highlight">Råd, viden og vejledning</a></li>
+      <li><a href="#frirum" class="nav-highlight">Råd, viden og vejledning</a></li>
       <li><a href="#kontakt">Kontakt os</a></li>
     </ul>
   </nav>
@@ -58,47 +58,47 @@
         </div>
     </section>
 
-    <!-- H/P -->
+    <!--HOVEDINDHOLD-->
 <section class="features" id="frirum" aria-labelledby="features-title" role="list">
   <!-- Skærmlæser-overskrift (synes ikke visuelt, men giver sektionen et navn) -->
   <h2 id="features-title" class="sr-only">Dit digitale FRI:RUM</h2>
 
-  <!-- 1 -->
+  <!-- 1: 2 Min frirum -->
   <div class="cta-card cta-1" role="listitem">
     <h3>2 minutters frirum</h3>
     <p>
       En 2-minutters guidet ro-øvelse du kan lytte til eller læse.
       Lavet til stressede hjerner og mikropauser.
     </p>
-    <a href="#" class="more-link" aria-label="Start 1 minuts frirum">Prøv nu</a>
+    <a href="#" class="more-link" aria-label="Start 2 minutters frirum">Prøv nu</a>
   </div>
 
 
-  <!-- 2 -->
+  <!--2: Selvhjælp og viden-->
   <div class="cta-card cta-3" role="listitem">
-    <h4>Selvhjælp & viden</h4>
+    <h3>Selvhjælp & viden</h3>
     <p>
       Små, overskuelige råd om overstimulering, grænser
       og mental ro – skrevet i et sprog du faktisk kan holde ud.
     </p>
-    <a href="#" class="more-link" aria-label="Læs selvhjælp og viden">Læs mere</a>
+    <a href="#" class="more-link" aria-label="Læs om selvhjælp og viden">Læs mere</a>
   </div>
 </section>
 
 
     <!-- BREVKASSE -->
     <section class="brevkasse" id="brevkasse" aria-labelledby="brevkasse-title">
-        <div class="brevkasse-text">
+        <div class="brevkasse-inner">
             <h2 id="brevkasse-title">Skriv anonymt til brevkassen</h2>
             <p>
-               “Jeg kan ikke sige det til mine forældre/veninder/kæreste – men jeg
-               har brug for at nogen voksne tager mig seriøst.” Du kan være helt anonym.
+               “Jeg kan ikke sige det til mine forældre/veninder/kæreste – Del dine bekymringer trygt med os.” Du kan være helt anonym.
             </p>
             <a class="secondary-btn" href="#">Skriv til os</a>
         </div>
+
         <div class="brevkasse-img">
             <!--MANGLER BILLEDE-->
-            <img src="img/brevkasse-placeholder.jpg" alt="En ung person sidder overfor en voksen rådgiver og taler; rådgiveren lytter opmærksomt med åbent kropssprog. Billedet viser et roligt rådgivningsrum med varm belysning og planter i baggrunden. Ingen synlig tekst i billedet. Tonen er tryg, rolig og støttende.">
+            <img src="img/brevkasse-placeholder.jpg" alt="En ung person sidder overfor en voksen rådgiver og taler; rådgiveren lytter opmærksomt. Billedet viser et roligt rådgivningsrum med varm belysning og planter i baggrunden. Ingen synlig tekst i billedet. Tonen er tryg, rolig og støttende.">
         </div>
     </section>
 
@@ -108,15 +108,18 @@
 
 <footer id="kontakt" class="site-footer" aria-label="sidefod">
     <div class="footer-inner">
-    <div class="footer-col">
-
-            <strong>FRI:RUM</strong><br>
+    
+        <div class="footer-col">
+         <strong>FRI:RUM</strong><br>
             Et øjeblik af frihed.
         </div>
+
         <div class="footer-col">
             <p><strong>Om os</strong><br>
-            FRI:RUM er et digitalt frirum skabt af Frirum
-            – en non-profit organisation der arbejder for unges mentale trivsel.</p>
+            FRI:RUM er et digitalt frirum skabt af frivillige.
+            – en non-profit organisation der arbejder for unges mentale trivsel.
+        </p>
+        </div>
 
         <div class="footer-col">
             <p><strong>Kontakt</strong><br>

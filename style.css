@@ -31,67 +31,97 @@ img {
     --tekst mørk grøn/grå: #2E3A34
 */
 
-/* TOP-NAV */
+/* HEADER + LOGO + NAVIGATION */
 header {
-    background-color: #E2D3B6; /* rolig beige header */
-    padding: 1em;
-    border-bottom: 1px solid rgba(0,0,0,0.08);
+  background-color: #E2D3B6; /* rolig beige header */
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: space-between;   /* <-- logo venstre, nav midt, burger højre */
   position: relative;
+  gap: 1rem;
 }
 
-nav{
-display: flex;
-    justify-content: center;
-    align-items: center;
+.logo img {
+  height: 45px;
+  width: auto;
 }
 
+/* NAVIGATION LINKS */
 nav ul {
   list-style: none;
-    padding: 0;
-    display: flex;
-    gap: 1.5rem;
-}
-
-nav li {
-    padding: 0.8em 1.2em;
-    text-align: center;
+  display: flex;
+  gap: 2rem;
+  padding: 0;
+  margin: 0;
 }
 
 nav li a {
-    color: #2E3A34;
+  color: #2E3A34;
   text-decoration: none;
-    font-size: 1rem;
   font-weight: 500;
-  transition: all 0.2s ease;
+  font-size: 1rem;
+  position: relative;
+  transition: all 0.3s ease;
 }
 
-nav li a:hover {
-    text-decoration: underline;
-    text-underline-offset: 0.2em;
-    color: #2E3A34;
-  font-weight: 600;
-}
-
+/* aktiv side eller hover */
+nav li a:hover,
 nav li a.nav-highlight {
-    background-color: #D4A373;
-    color: #fff;
-    padding: 0.6em 1em;
-    border-radius: 8px;
-    font-weight: 600;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
+  color: #fff;
+  background-color: #D4A373;
+  padding: 0.5em 1em;
+  border-radius: 10px;
 }
-nav li a.nav-highlight:hover
-nav li a.nav-highlight:focus-visible {
-    background-color: #c79258;
-    color: #fff;
-    outline: 3px solid #2E3A34;
-    outline-offset: 3px;
+
+/* skjul burger på desktop */
+#bars {
+  display: none;
 }
-    
+
+/* RESPONSIV NAVIGATION */
+@media (max-width: 768px) {
+  header {
+    justify-content: flex-end;
+  }
+
+  .logo img {
+    position: absolute;
+    left: 1rem;
+    top: 0.7rem;
+    height: 40px;
+  }
+
+  nav {
+    display: none;
+  }
+
+  nav.show {
+    display: block;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: #E2D3B6;
+    width: 100%;
+    padding: 1em 0;
+    z-index: 100;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+  }
+
+  #bars {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 1.6rem;
+    color: #2E3A34;
+  }
+}
 
 
 /* burger */
@@ -129,6 +159,24 @@ button#bars:focus-visible {
     border-top: 1px solid rgba(0,0,0,0.1);
 }
 }
+/* Brand / logo til venstre */
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+}
+
+.brand img {
+  height: 36px;            
+  width: auto;
+}
+
+.brand span {
+  font-weight: 700;
+  letter-spacing: .5px;
+  color: #2E3A34;
+}
+
 
 /* Når JS tilføjer .show til nav, vises menuen */
 nav.show ul {

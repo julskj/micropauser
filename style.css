@@ -378,8 +378,8 @@ line-height: 1.2;
      @media (min-width: 769px) {
     .features {
         grid-template-columns: repeat(3, 1fr);
-    }
-    }
+     }
+    } 
     
 /* BREVKASSE SEKTIOEN */
 .brevkasse {
@@ -397,20 +397,36 @@ line-height: 1.2;
 
 /* tekst i brevkasse */
 .brevkasse-inner h2 {
-    font-size: 1.3rem;
+    font-size: 1.25rem;
    font-weight: 600;
-    margin-bottom: 0.6em;
+    margin-bottom: 0.5em;
     color: #2E3A34;
 }
 
 .brevkasse-inner p {
-    font-size: 1rem;
-    margin-bottom: 1em;
+    font-size: 0.95rem;
+    margin-bottom: 0.8em;
     color: #2E3A34;
-    max-width: 55ch; /*læsbarhed*/
+    max-width: 50ch; /*læsbarhed*/
 }
 
-/* knap i brevkasse */
+/*billede brevkasse */
+.brevkasse-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: none;
+  
+}
+.brevkasse-img img {
+  border-radius: 10px;
+  width: 90%; 
+  height: auto;
+  object-fit: cover;
+  
+}
+
+  /* knap i brevkasse */
 .brevkasse a.primary-btn {
   margin-top: 1em;
 }
@@ -419,6 +435,8 @@ line-height: 1.2;
   @media (min-width: 769px) {
     .brevkasse {
         grid-template-columns: 1fr 1fr; /*tekst + billede side om side */
+        max-width: 1000px;
+        padding: 2em;
     }
 }
 .secondary-btn { /* sekundær cta knap */
@@ -443,15 +461,6 @@ line-height: 1.2;
      border-radius: 8px;
 }
 
-/* brevkasse billede MANGLER */
-.brevkasse-img img { 
-    border-radius: 12px;
-    box-shadow: 0 12px 32px rgba(0,0,0,0.08);
-    border: 1px solid rgba(0,0,0,0.06);
-    object-fit: cover;
-    width: 100%;
-    height: auto;
-}
 
 /* FOOTER */
 footer {
@@ -474,7 +483,6 @@ footer {
    font-size: 0.9rem;
    line-height: 1.5;
 }
-
 
 
 footer strong {

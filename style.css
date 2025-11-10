@@ -385,10 +385,14 @@ line-height: 1.2;
 .brevkasse {
   background-color: #E2D3B6; /* varm beige "kontakt os" blok */
   border-radius: 12px;
-  padding: 2em;
+  padding: 1.5em 1.8em;
   display: grid;
-  gap: 2em;
+  gap: 1.5em; /* luft mellem tekst og billede */
   align-items: center;
+  max-width: 900px;
+  margin: 0 auto;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+
 }
 
 /* tekst i brevkasse */

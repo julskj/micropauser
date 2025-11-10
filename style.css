@@ -319,6 +319,7 @@ line-height: 1.2;
   display: grid;
     gap: 1.5em;
     padding-block: 2em;
+    align-items: stretch; /*lige højde på kortene */
 }
 
 /* individuelle kort */
@@ -330,7 +331,9 @@ line-height: 1.2;
    color: #2E3A34;
    border: 1px solid rgba(0,0,0,0.05);
    transition: transform 0.2s ease, box-shadow 0.2s ease;
-
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
 }
 
 .cta-card:hover {

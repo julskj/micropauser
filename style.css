@@ -299,8 +299,7 @@ line-height: 1.2;
 @media (min-width: 769px) {
     .hero {
         grid-template-columns: 1fr 1fr;
-      
-    }
+   }
 
     .hero-text {
         max-width: 480px;

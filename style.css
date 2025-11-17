@@ -341,7 +341,7 @@ line-height: 1.2;
 
 }
 /*overskrift og tekst i kortene */
-.cta-card h2 {
+.cta-card h3 {
   font-size: 1.2rem;
   font-weight: 600;
   color: #2E3A34;

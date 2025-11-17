@@ -461,10 +461,10 @@ line-height: 1.2;
 }
 
 
-/* FOOTER */
+/* FOOTER - adresse */
 footer {
     background-color: #2E3A34; /* mørk rolig baggrund */
-  color: #fff;
+    color: #fff;
     padding: 2em 1em;
     margin-top: 4em;
 }
@@ -472,17 +472,16 @@ footer {
 .footer-inner {
    display: grid;
    grid-template-columns: repeat(3, 1fr); /* tre lige brede kolonner */
-   justify-items: center; /* centrer tekst vandret i hver kolonne */
-   align-items: start; /* ens højde */
-   text-align: center; /* centrer tekst i hver kolonne */
-   gap: 3em; /* lidt mere luft mellem kolonner */
+   justify-items: center;        /* centrer tekst vandret i hver kolonne */
+   align-items: start;
+   text-align: center;
+   gap: 3em;
    max-width: 1100px;
    margin: 0 auto;
-   padding-block: 2em; /* luft */
+   padding-block: 2em;
    font-size: 0.9rem;
    line-height: 1.5;
 }
-
 
 footer strong {
     font-weight: 600;
@@ -492,25 +491,171 @@ footer p {
     margin-bottom: 0.8em;
 }
 
-/*links i footer */
+/* ADDRESS i footer – samme udtryk som p */
+footer address {
+    font-style: normal;
+    margin-bottom: 0.8em;
+}
+
+/* links i footer */
 footer a {
     color: #D4A373;
     text-decoration: none;
-    }
+}
 
-footer a:hover, footer a:focus-visible {
+footer a:hover,
+footer a:focus-visible {
     color: #fff;
     text-decoration: underline;
     outline: 2px solid #D4A373; /* tydelig tastaturfokus */
-    }
+}
 
-/* FOOTER 3 kolonner på desktop */
+/* FOOTER – 3 kolonner på desktop */
 @media screen and (min-width: 769px) {
   .footer-inner {
     grid-template-columns: repeat(3, 1fr);
     gap: 3em;
   }
+
+  /* KONTAKT-FORM */
+
+.kontaktform {
+  background-color: #E2D3B6;
+  border-radius: 12px;
+  padding: 2em 2em 2.5em;
+  max-width: 760px;
+  margin: 0 auto;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.05);
 }
 
-/* KONTAKT OS AFSNIT */
+.kontaktform .kontakt-tekst {
+  font-weight: 400;
+  font-size: 1.05rem;
+  margin: 0.5em 0 1.5em;
+  color: #2E3A34;
+}
 
+.kontaktform form label {
+  display: block;
+  font-weight: 600;
+  color: #2E3A34;
+}
+
+.kontaktform input[type="text"],
+.kontaktform input[type="email"],
+.kontaktform input[type="tel"],
+.kontaktform select,
+.kontaktform textarea {
+  width: 100%;
+  padding: 0.9em 1em;
+  border: 1px solid rgba(0,0,0,0.18);
+  border-radius: 8px;
+  margin-top: 0.5em;
+  margin-bottom: 1em;
+  background: #fff;
+  color: #2E3A34;
+  font: inherit;
+  transition: box-shadow .2s ease, border-color .2s ease;
+}
+
+.kontaktform ::placeholder {
+  color: #6a756f;
+}
+
+.kontaktform input:focus-visible,
+.kontaktform select:focus-visible,
+.kontaktform textarea:focus-visible {
+  outline: none;
+  border-color: #D4A373;
+  box-shadow: 0 0 0 3px rgba(212,163,115,.35);
+}
+
+.kontaktform .custom-select { position: relative; }
+
+.kontaktform .custom-select::before,
+.kontaktform .custom-select::after {
+  --size: 0.32rem;
+  position: absolute;
+  content: "";
+  right: 1rem;
+  pointer-events: none;
+}
+
+.kontaktform .custom-select::before {
+  border-left: var(--size) solid transparent;
+  border-right: var(--size) solid transparent;
+  border-bottom: var(--size) solid #2E3A34;
+  top: 48%;
+}
+
+.kontaktform .custom-select::after {
+  border-left: var(--size) solid transparent;
+  border-right: var(--size) solid transparent;
+  border-top: var(--size) solid #2E3A34;
+  top: 63%;
+}
+
+.kontaktform fieldset {
+  border: 2px dotted #D4A373;
+  border-radius: 8px;
+  padding: 1em 1.2em 0.8em;
+  margin: 1em 0 1.2em;
+}
+
+.kontaktform legend {
+  font-weight: 700;
+  color: #2E3A34;
+  padding: 0 .4em;
+}
+
+.kontaktform .checkbox {
+  margin: 0.8em 0;
+}
+
+.kontaktform input[type="checkbox"],
+.kontaktform input[type="radio"] {
+  accent-color: #D4A373;
+  cursor: pointer;
+  margin-right: .45em;
+  transform: translateY(1px);
+}
+
+.kontaktform input[type="submit"] {
+  display: inline-block;
+  background-color: #2E3A34;
+  color: #fff;
+  padding: 0.8em 1.5em;
+  border: none;
+  border-radius: 8px;
+  width: 100%;
+  margin-top: 0.6em;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color .2s ease, transform .2s ease;
+}
+
+.kontaktform input[type="submit"]:hover {
+  background-color: #1d2622;
+  transform: translateY(-2px);
+}
+
+.kontaktform input[type="submit"]:focus-visible {
+  outline: 3px solid #D4A373;
+  outline-offset: 3px;
+  border-radius: 8px;
+}
+
+/* ------------------------- MEDIA QUERIES ------------------------- */
+
+@media (max-width: 768px) {
+  .kontaktform {
+    padding: 1.25em 1em 1.75em;
+  }
+}
+
+@media (min-width: 769px) {
+  /* desktop-regler bliver stående som før */
+}
+
+}

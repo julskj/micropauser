@@ -29,21 +29,21 @@
     <button id="bars" aria-label="Åbn menu">☰</button>
 
     <nav id="main-nav">
-        <ul> <!--INDSÆT KORREKTE LINK-->
+        <ul> <!--LINK-->
             <li><a href="råd.html">Selvhjælp og viden</a></li>
-            <li><a href="index.html" class="nav-highlight">Dit frirum</a></li>
+            <li><a href="index.html" class="nav-highlight">Selvhjaelp og viden</a></li>
             <li><a href="kontaktos.html">Kontakt os</a></li>
         </ul>
     </nav>
 </header>
 
 <!--HERO / SELVHJÆLP OG VIDEN-->
-<main>
-    <section class="hero" aria-labelledby="hero-title">
+<main class="raad-main">
+    <section class="raad-hero" aria-labelledby="hero-title">
         <div class="hero-text">
             <h1 id="hero-title"> Selvhjælp & viden</h1>
             
-            <p> <!--INDSÆT VIDEN FRA MARY FONDEN KILDEN-->
+            <p> <!-- VIDEN FRA MARY FONDEN KILDEN-->
               Ifølge <strong>Mary Fonden (2023)</strong> oplever mere end 70% af unge 
                 regelmæssigt stress, pres eller følelsen af at være “på” hele tiden.  
                 Her finder du jordnære råd og små mikropauser, der hjælper dig med 
@@ -51,15 +51,19 @@
             </p>
         </div>
 
-          <!--INDSÆT BILLEDER MANGLER MANGLER MANGLER-->
-        <div class="hero-img brevkasse-img">
-            <!-- billede -->
-            <img src="img/letterbox-on-a-postbox-outdoor.jpg" alt="Brevkasse på en postkasse">
+          <!--FRIRUM FORTÆLLING VIDEO-->
+        <div class="video-wrapper">
+        <video controls preload="metadata"
+               aria-label=" video med unge mennesker der skiftevis føler sig stresset og i ro imens der fortælles, hvad FRI:RUM er">
+            <source src="frirum.mp4" type="video/mp4">
+            Din browser understøtter ikke video-elementet.
+        </video>
         </div>
     </section>
 
     <!--VIDEO SEKTION-->
-    <section class="video-section" aria-labelledby="video-title">
+    <section class="raad-frirum" aria-labelledby="video-title">
+        <div> 
         <h2 id="video-title">Dit digitale FRIRUM</h2>
        
         <p>
@@ -68,22 +72,21 @@
             Derfor kan en kort guidet vejrtrækningsøvelse være et effektivt lille “reset”,
             når du føler dig presset eller overstimuleret.
         </p>
-
-         <!--find youtube link-->
-        <div class="video-wrapper">
-            <iframe width="560" height="315" src="https://www.youtube.com/watch?v=OyhnbT8UEKo" title="YouTube video guidet meditationr" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
-        
-        <p class="video-alt">
-            Kan du ikke afspille videoen?
-            <a href="https://www.youtube.com/watch?v=OyhnbT8UEKo" target="_blank"> <!--indsæt samme yt link-->
-                Klik her for at åbne øvelsen på YouTube.
-            </a>
-        </p>
+
+         <!--FRIRUM PAUSE VIDEO-->
+         <div class="video-wrapper">
+        <video controls preload="metadata"
+               aria-label=" video med en guidet 2-minutters mikropause, hvor du kan følge med i en vejrtrækningsøvelse guidet af en rolig kvindelig stemme, mens kvinden sidder i skrædderstilling i et rolig rum">
+            <source src="frirumpause.mp4" type="video/mp4">
+            Din browser understøtter ikke video-elementet.
+        </video>
+        </div>
     </section>
 
+
     <!--VIDEN/ kilde ref-->
-    <section class="content-section">
+    <section class="raad-card">
         <h2>Hvad vil det sige at være overstimuleret?</h2>
         <p>
             Overstimulering opstår, når hjernen får flere sanseindtryk, informationer
@@ -98,53 +101,67 @@
     </section>
 
     <!-- KONKRETE RÅD -->
-    <section class="content-section">
+    <section class="raad-card advice-section">
         <h2>3 små råd når det hele larmer</h2>
+        
         <ol class="tips-list">
             <li>
-                <strong>1. Giv dig selv en 2-minutters mikropause.</strong><br>
+                 <strong>Giv dig selv en 2-minutters mikropause. </strong><br>
+                
+                 <p> 
                 Korte, bevidste pauser er en af de mest veldokumenterede måder
                 at sænke stressniveauet på. Ifølge <strong>WHO (2022)</strong>
                 kan blot få minutters fokuseret vejrtrækning hjælpe med at
                 regulere nervesystemet og give hjernen et lille “reset”.
+                 </p>
             </li>
+            
             <li>
-                <strong>2. Skru ned for sanseindtrykkene.</strong><br>
-                En amerikansk meta-analyse (2022) viser, at kontinuerlig eksponering
+                <strong> Skru ned for sanseindtrykkene.</strong><br>
+               
+                <p>En amerikansk meta-analyse (2022) viser, at kontinuerlig eksponering
                 for skærme, notifikationer og støj øger risikoen for mental udmattelse.
                 Du kan hjælpe dig selv ved at dæmpe lys, skrue ned for lyd,
                 slå notifikationer fra i perioder eller lægge telefonen væk i korte intervaller.
+                </p>
             </li>
+            
             <li>
-                <strong>3. Sæt en blid grænse.</strong><br>
+                <strong> Kan du sige fra?</strong><br>
+               
+                <p>
                 <strong>Mary Fonden (2023)</strong> peger på, at mange unge har svært ved at sige fra,
                 selv når de er pressede. At skrive “Jeg kan ikke lige nu, men vender tilbage i morgen”
                 eller takke nej til en aftale kan være en vigtig måde at passe på din mentale sundhed.
+                </p>
             </li>
         </ol>
     </section>
 
     <!-- NEURODIVERGEN/HANDICAP -->
-    <section class="content-section">
+    <section class="raad-card">
         <h2>Hvis du er neurodivergent eller har et handicap</h2>
         <p>
             Mange med ADHD, autisme, angst, sansefølsomhed eller andre kognitive udfordringer
             oplever overstimulering hurtigere og stærkere end andre. Forskning peger på,
             at det især kan være svært at filtrere sanseindtryk og skift mellem mange opgaver.
         </p>
-        <p>
-            FRI:RUM er designet som et lille digitalt åndehul, hvor der er tænkt i ro, overskuelighed
-            og pauser. Det betyder blandt andet:
-        </p>
+       
+           <h2> FRI:RUM er designet som et lille digitalt frirum, Det betyder blandt andet: </h2>
+        
         <ul>
             <li>Rolige farver og simple layouts uden for meget visuelt støj.</li>
+
             <li>Korte tekstafsnit og tydelige overskrifter, så du kan skimme og holde pauser.</li>
+
             <li>Fokusmarkering og tastaturvenlig navigation, så du kan bruge siden med hjælpemidler.</li>
+            
             <li>Enkle knapper og links, der fortæller tydeligt, hvad der sker, når du klikker.</li>
         </ul>
+        
         <p>
             Siden er ikke perfekt, men den er lavet med respekt for, at hjerner er forskellige – 
-            og at du har ret til et frirum, der føles trygt.
+            og at du har ret til et frirum, der føles trygt. Din feedback er altid velkommen.
         </p>
     </section>
 
@@ -154,7 +171,7 @@
   <div class="footer-inner">
     <div class="footer-col">
       <strong>FRI:RUM</strong><br>
-      Et øjeblik af frihed.
+      et digitalt frirum for unge.
     </div>
 
     <div class="footer-col">

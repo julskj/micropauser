@@ -252,12 +252,12 @@ line-height: 1.2;
 
 /* HERO SECTION */
 .hero {
-    background-color: #E2D3B6; /* varm beige "pauserum" blok */
+    background-color: #E2D3B6; /* varm beige */
     border-radius: 12px;
     padding: 2em;
     display: grid;
     gap: 2em;
-    align-items: center;  
+    align-items: stretch;  
 }
 
 .hero-text h1 {
@@ -289,16 +289,26 @@ line-height: 1.2;
 }
 
 /* hero billede */
-.hero-img img { 
+.hero-img { 
+    align-self: stretch;
+  }
+
+  .hero-img img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     border-radius: 12px;
-    box-shadow: 0 12px 32px rgba(0,0,0,0.08);
+    box-shadow:0 12px 32px rgba(0,0,0,0.08);
     border: 1px solid rgba(0,0,0,0.06);
-}
+    
+  }
 
  /* HERO to-kolonne layout desktop*/
 @media (min-width: 769px) {
     .hero {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1.4fr 1fr;
+        align-items: stretch;
    }
 
     .hero-text {
@@ -459,7 +469,6 @@ line-height: 1.2;
      outline-offset: 3px;
      border-radius: 8px;
 }
-
 
 /* FOOTER - adresse */
 footer {
@@ -646,7 +655,7 @@ footer a:focus-visible {
   border-radius: 8px;
 }
 
-/* ------------------------- MEDIA QUERIES ------------------------- */
+/* MEDIA QUERIES */
 
 @media (max-width: 768px) {
   .kontaktform {
@@ -655,7 +664,113 @@ footer a:focus-visible {
 }
 
 @media (min-width: 769px) {
-  /* desktop-regler bliver stående som før */
+  
 }
 
+}
+
+/* RÅD STYLING */
+
+/* Wrapper for hele råd-siden */
+.raad-main {
+  max-width: 1100px;
+  margin: 3rem auto 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+/* Fælles style til kort */
+.raad-card,
+.raad-hero,
+.raad-frirum {
+  background-color: #f5dfb5;
+  border-radius: 14px;
+  padding: 2rem 2.5rem;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.05); 
+}
+
+.raad-card {
+  background-color: #fdfcf8;
+}
+
+/* Hero øverst */
+.raad-hero {
+  background-color: #f5dfb5;
+  display: grid;
+  gap: 2rem;
+  align-items: center;
+}
+
+.raad-hero img {
+  max-width: 240px;
+  margin-left: auto;
+}
+
+.raad-hero p {
+  max-width: 60ch;
+}
+
+/* FRIRUM + video sektion */
+.raad-frirum {
+  display: grid;
+  gap: 2rem;
+}
+ 
+/* Overskrifter i kort og frirum */
+.raad-card h2,
+.raad-frirum h2 {
+  margin-bottom: 0.9rem;
+}
+
+/* To kolonner på desktop  */
+@media (min-width: 900px) {
+  .raad-frirum {
+    grid-template-columns: 2fr 1.5fr;
+    align-items: center;
+  }
+
+  .raad-hero {
+    grid-template-columns: 2fr 1.5fr;
+  }
+}
+
+/* Video-container */
+.video-wrapper {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.22); /* mindre dramatisk */
+}
+
+/* Selve videoen */
+.video-wrapper video {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Tekst i de hvide kort */
+.raad-card h2 {
+  margin-bottom: 1rem;
+}
+
+.raad-card p,
+.raad-card li {
+  max-width: 60ch; /* ens læsbarhed */
+  line-height: 1.6;
+}
+
+.raad-card ol,
+.raad-card ul {
+  padding-left: 1.5rem;
+  margin-top: 0.7rem;
+}
+
+.raad-card ul li {
+  margin-bottom: 0.55rem;
+}
+
+.tips-list li {
+  margin-bottom: 1.1rem;
+  line-height: 1.55;
 }

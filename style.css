@@ -525,6 +525,7 @@ footer a:focus-visible {
     grid-template-columns: repeat(3, 1fr);
     gap: 3em;
   }
+}
 
   /* KONTAKT-FORM */
 
@@ -667,8 +668,6 @@ footer a:focus-visible {
   
 }
 
-}
-
 /* RÅD STYLING */
 
 /* Wrapper for hele råd-siden */
@@ -756,6 +755,7 @@ footer a:focus-visible {
 
 .raad-card p,
 .raad-card li {
+  margin-bottom: 0.9rem;
   max-width: 60ch; /* ens læsbarhed */
   line-height: 1.6;
 }
